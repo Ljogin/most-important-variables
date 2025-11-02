@@ -52,7 +52,7 @@ if data is not None:
         if problem_type == "classification" and y.dtype == "object":
             y = LabelEncoder().fit_transform(y)
 
-        if X.empty or y.empty:
+        if X.empty or len(y) == 0:
             st.error("❌ Dane wejściowe są puste po przetworzeniu. Sprawdź plik CSV.")
             st.stop()
 
@@ -112,3 +112,6 @@ if data is not None:
                 """)
             except Exception as e:
                 st.error(f"❌ Błąd podczas trenowania modeli: {e}")
+        """)
+        except Exception as e:
+            st.error(f"❌ Błąd podczas trenowania modeli: {e}")
