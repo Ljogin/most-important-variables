@@ -52,7 +52,7 @@ if data is not None:
         if problem_type == "classification" and y.dtype == "object":
             y = LabelEncoder().fit_transform(y)
 
-        if X.empty or len(y) == 0:
+        if X.empty or y.empty:
             st.error("❌ Dane wejściowe są puste po przetworzeniu. Sprawdź plik CSV.")
             st.stop()
 
