@@ -54,6 +54,9 @@ except Exception as e:
     st.error(f"❌ Błąd przy przygotowaniu danych: {e}")
     st.stop()
 
+st.write("🔍 Rozmiar danych treningowych:", X_train.shape, y_train.shape)
+st.write("🔍 Typ modelu:", type(model))
+
 # 5. Trenowanie modeli
 if st.button("🚀 Uruchom analizę"):
     with st.spinner("🧠 Trwa trenowanie modeli..."):
