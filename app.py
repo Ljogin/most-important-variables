@@ -55,7 +55,8 @@ except Exception as e:
     st.stop()
 
 st.write("🔍 Rozmiar danych treningowych:", X_train.shape, y_train.shape)
-st.write("🔍 Typ modelu:", type(model))
+st.write("🔍 Typ modelu:", type(best_model))
+st.write("Parametry modelu:", best_model.get_params())
 
 # 5. Trenowanie modeli
 if st.button("🚀 Uruchom analizę"):
